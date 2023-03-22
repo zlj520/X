@@ -256,7 +256,7 @@ ui.layout(
                             <horizontal  gravity="center_vertical" padding="5 5" >
                                 <View bg="#00BFFF" h="*" w="10"  ></View>
                                 <vertical padding="10 8" h="auto" w="0" layout_weight="1">
-                                    <text w="auto" textColor="#222222" textSize="15sp" text="账号(限1个)" />
+                                    <text w="auto" textColor="#222222" textSize="15sp" text="账号(限 1 个)" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="使用前确保所有账号都已完成短信验证" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="账号:密码:token" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="结束后会自动登回账号" />
