@@ -260,7 +260,7 @@ ui.layout(
                                     <text w="auto" textColor="#999999" textSize="12sp" text="使用前确保所有账号都已完成短信验证" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="账号:密码:token" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="结束后会自动登回账号" />
-                                    <text w="auto" textColor="#999999" textSize="12sp" text="新增账号1对1微信推送，按格式配置即可" />
+                                    <text w="auto" textColor="#999999" textSize="12sp" text="新增账号分数微信推送，按格式配置即可" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="没有则根据上面配置的pushplus_token为主" />
                                     <input id="ttxs_pro_zhanghao" text="" textSize="13sp" />
                                 </vertical> 
