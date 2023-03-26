@@ -243,7 +243,6 @@ ui.layout(
                                     <text w="auto" textColor="#222222" textSize="15sp" text="是否启用音量调节" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="每次运行脚本后调节音量百分比" />
                                 </vertical>
-                                <checkbox id="ttxs_pro_yl_on" marginLeft="4" marginRight="6" checked="true" />
                             </horizontal>
                             <horizontal  gravity="center_vertical" padding="5 5" >
                                 <View bg="#00BFFF" h="*" w="10"  ></View>
