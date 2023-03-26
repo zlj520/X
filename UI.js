@@ -249,6 +249,7 @@ ui.layout(
                                 <View bg="#00BFFF" h="*" w="10"  ></View>
                                 <vertical padding="10 8" h="auto" w="0" layout_weight="1">
                                     <text w="auto" textColor="#222222" textSize="15sp" text="音量" />
+                                </horizontal>
                                     <text w="auto" textColor="#999999" textSize="12sp" text="调节音量百分比(只填数字)" />
                                 <button style="Widget.AppCompat.Button.Colored" id="ttxs_pro_save" text="保存配置" padding="12dp" w="*" />
                             </horizontal>
@@ -604,7 +605,6 @@ ui.ttxs_pro_save.click(function () {
     TTXS_PRO_CONFIG.put("pushplus", ui.ttxs_pro_pushplus.getText() + "");
     TTXS_PRO_CONFIG.put("yl_on", ui.ttxs_pro_yl_on.isChecked());
     TTXS_PRO_CONFIG.put("yinliang", ui.ttxs_pro_yinliang.getText() + "");
-    TTXS_PRO_CONFIG.put("zhanghao", ui.ttxs_pro_zhanghao.getText() + "");
 
     toastLog("好好学习pro配置保存成功！");
 });
@@ -661,8 +661,6 @@ ui.ttxs_pro_reset.click(function () {
     ui.ttxs_pro_yl_on.setChecked(TTXS_PRO_CONFIG.get("yl_on"));
     TTXS_PRO_CONFIG.put("yinliang", "0");
     ui.ttxs_pro_yinliang.setText(TTXS_PRO_CONFIG.get("yinliang"));
-    TTXS_PRO_CONFIG.put("zhanghao", "");
-    ui.ttxs_pro_zhanghao.setText(TTXS_PRO_CONFIG.get("zhanghao"));
 
     toastLog("好好学习pro配置恢复默认！");
 });
@@ -791,7 +789,6 @@ function Initialize() {
     ui.ttxs_pro_pushplus.setText(TTXS_PRO_CONFIG.get("pushplus", ""));
     ui.ttxs_pro_yl_on.setChecked(TTXS_PRO_CONFIG.get("yl_on", true));
     ui.ttxs_pro_yinliang.setText(TTXS_PRO_CONFIG.get("yinliang", "0"));
-    ui.ttxs_pro_zhanghao.setText(TTXS_PRO_CONFIG.get("zhanghao", ""));
 
     ui.study_article.setChecked(STUDY_CONFIG.get("article", true));
     ui.study_video.setSelection(STUDY_CONFIG.get("video", 0));
