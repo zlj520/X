@@ -252,7 +252,6 @@ ui.layout(
                                     <text w="auto" textColor="#999999" textSize="12sp" text="调节音量百分比(只填数字)" />
                                 </vertical> 
                                 <input id="ttxs_pro_yinliang" marginLeft="4" marginRight="6" text="0" textSize="13sp"  inputType="number" />
-                            </horizontal>
                             <horizontal  gravity="center_vertical" padding="5 5" >
                                 <View bg="#00BFFF" h="*" w="10"  ></View>
                                 <vertical padding="10 8" h="auto" w="0" layout_weight="1">
