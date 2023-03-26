@@ -254,10 +254,6 @@ ui.layout(
                                 <input id="ttxs_pro_yinliang" marginLeft="4" marginRight="6" text="0" textSize="13sp"  inputType="number" />
                             <horizontal  gravity="center_vertical" padding="5 5" >
                                 <View bg="#00BFFF" h="*" w="10"  ></View>
-                                <vertical padding="10 8" h="auto" w="0" layout_weight="1">
-                                    <input id="ttxs_pro_zhanghao" text="" textSize="13sp" />
-                                </vertical> 
-                            </horizontal>
                             <horizontal>
                                 <button style="Widget.AppCompat.Button.Colored" id="ttxs_pro_save" text="保存配置" padding="12dp" w="*" />
                             </horizontal>
