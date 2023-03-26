@@ -250,8 +250,6 @@ ui.layout(
                                 <vertical padding="10 8" h="auto" w="0" layout_weight="1">
                                     <text w="auto" textColor="#222222" textSize="15sp" text="音量" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="调节音量百分比(只填数字)" />
-                                </vertical> 
-                            </horizontal>
                             <horizontal>
                                 <button style="Widget.AppCompat.Button.Colored" id="ttxs_pro_save" text="保存配置" padding="12dp" w="*" />
                             </horizontal>
