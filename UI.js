@@ -252,7 +252,6 @@ ui.layout(
                                     <text w="auto" textColor="#999999" textSize="12sp" text="调节音量百分比(只填数字)" />
                                 <button style="Widget.AppCompat.Button.Colored" id="ttxs_pro_save" text="保存配置" padding="12dp" w="*" />
                             </horizontal>
-                            <horizontal>
                                 <button style="Widget.AppCompat.Button.Colored" id="ttxs_pro_reset" text="恢复默认" padding="12dp" w="*" />
                             </horizontal>
                         </vertical>
@@ -445,7 +444,6 @@ ui.layout(
                                     <input id="study_Token" text="" textSize="13sp" />
                                 </vertical> 
                             </horizontal>
-                            <horizontal>
                                 <button style="Widget.AppCompat.Button.Colored" id="study_save" text="保存配置" padding="12dp" w="*" />
                             </horizontal>
                             <horizontal>
