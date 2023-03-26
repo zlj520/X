@@ -250,8 +250,25 @@ ui.layout(
                                 <vertical padding="10 8" h="auto" w="0" layout_weight="1">
                                     <text w="auto" textColor="#222222" textSize="15sp" text="音量" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="调节音量百分比(只填数字)" />
+                                </vertical> 
+                                <input id="ttxs_pro_yinliang" marginLeft="4" marginRight="6" text="0" textSize="13sp"  inputType="number" />
+                            </horizontal>
+                            <horizontal  gravity="center_vertical" padding="5 5" >
+                                <View bg="#00BFFF" h="*" w="10"  ></View>
+                                <vertical padding="10 8" h="auto" w="0" layout_weight="1">
+                                    <text w="auto" textColor="#222222" textSize="15sp" text="多账号(选填，不限个数)" />
+                                    <text w="auto" textColor="#999999" textSize="12sp" text="使用前确保所有账号都已完成短信验证" />
+                                    <text w="auto" textColor="#999999" textSize="12sp" text="账号1:密码1:token1(换行/回车)账号2:密码2:token2(换行/回车)账号3:密码3:token3" />
+                                    <text w="auto" textColor="#999999" textSize="12sp" text="结束后会自动登录回账号1" />
+                                    <text w="auto" textColor="#999999" textSize="12sp" text="新增多账号1对1微信推送，按格式配置即可" />
+                                    <text w="auto" textColor="#999999" textSize="12sp" text="没有则根据上面配置的pushplus_token为主" />
+                                    <input id="ttxs_pro_zhanghao" text="" textSize="13sp" />
+                                </vertical> 
+                            </horizontal>
+                            <horizontal>
                                 <button style="Widget.AppCompat.Button.Colored" id="ttxs_pro_save" text="保存配置" padding="12dp" w="*" />
                             </horizontal>
+                            <horizontal>
                                 <button style="Widget.AppCompat.Button.Colored" id="ttxs_pro_reset" text="恢复默认" padding="12dp" w="*" />
                             </horizontal>
                         </vertical>
@@ -442,8 +459,6 @@ ui.layout(
                                     <text w="auto" textColor="#222222" textSize="15sp" text="push+ 消息推送" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="注：有需要的自行填写push+的Token，否则留空即可" />
                                     <input id="study_Token" text="" textSize="13sp" />
-                                </vertical> 
-                            </horizontal>
                                 <button style="Widget.AppCompat.Button.Colored" id="study_save" text="保存配置" padding="12dp" w="*" />
                             </horizontal>
                             <horizontal>
@@ -602,6 +617,7 @@ ui.ttxs_pro_save.click(function () {
     TTXS_PRO_CONFIG.put("pushplus", ui.ttxs_pro_pushplus.getText() + "");
     TTXS_PRO_CONFIG.put("yl_on", ui.ttxs_pro_yl_on.isChecked());
     TTXS_PRO_CONFIG.put("yinliang", ui.ttxs_pro_yinliang.getText() + "");
+    TTXS_PRO_CONFIG.put("zhanghao", ui.ttxs_pro_zhanghao.getText() + "");
 
     toastLog("好好学习pro配置保存成功！");
 });
@@ -658,6 +674,8 @@ ui.ttxs_pro_reset.click(function () {
     ui.ttxs_pro_yl_on.setChecked(TTXS_PRO_CONFIG.get("yl_on"));
     TTXS_PRO_CONFIG.put("yinliang", "0");
     ui.ttxs_pro_yinliang.setText(TTXS_PRO_CONFIG.get("yinliang"));
+    TTXS_PRO_CONFIG.put("zhanghao", "");
+    ui.ttxs_pro_zhanghao.setText(TTXS_PRO_CONFIG.get("zhanghao"));
 
     toastLog("好好学习pro配置恢复默认！");
 });
@@ -786,6 +804,7 @@ function Initialize() {
     ui.ttxs_pro_pushplus.setText(TTXS_PRO_CONFIG.get("pushplus", ""));
     ui.ttxs_pro_yl_on.setChecked(TTXS_PRO_CONFIG.get("yl_on", true));
     ui.ttxs_pro_yinliang.setText(TTXS_PRO_CONFIG.get("yinliang", "0"));
+    ui.ttxs_pro_zhanghao.setText(TTXS_PRO_CONFIG.get("zhanghao", ""));
 
     ui.study_article.setChecked(STUDY_CONFIG.get("article", true));
     ui.study_video.setSelection(STUDY_CONFIG.get("video", 0));
@@ -842,10 +861,10 @@ function check_baidu_api() {
 
 function getScript(choice) {
     let url_prefix = [
-        'https://gh-proxy.com/https://raw.githubusercontent.com/zlj520/X/main/',
-        "https://ghproxy.com/https://raw.githubusercontent.com/zlj520/X/main/",
-        'https://cdn.jsdelivr.net/gh/zlj520/X@main/',
-        'https://raw.githubusercontent.com/zlj520/X/main/',
+        'https://gh-proxy.com/https://raw.githubusercontent.com/zlj520/HHXX/main/',
+        "https://ghproxy.com/https://raw.githubusercontent.com/zlj520/HHXX/main/",
+        'https://cdn.jsdelivr.net/gh/zlj520/HHXX@main/',
+        'https://raw.githubusercontent.com/zlj520/HHXX/main/',
     ];
     for (var i = 0; i < url_prefix.length; i++) {
         try {
