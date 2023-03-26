@@ -572,7 +572,7 @@ ui.start.click(function () {
     });
 });
 
-// 保存好好学习pro脚本设置
+// 保存学习助手脚本设置
 ui.ttxs_pro_save.click(function () {
     TTXS_PRO_CONFIG.put("watchdog", ui.ttxs_pro_watchdog.getText() + "");
     TTXS_PRO_CONFIG.put("slide_verify", ui.ttxs_pro_slide_verify.getText() + "");
@@ -601,10 +601,10 @@ ui.ttxs_pro_save.click(function () {
     TTXS_PRO_CONFIG.put("yinliang", ui.ttxs_pro_yinliang.getText() + "");
     TTXS_PRO_CONFIG.put("zhanghao", ui.ttxs_pro_zhanghao.getText() + "");
 
-    toastLog("好好学习pro配置保存成功！");
+    toastLog("学习助手配置保存成功！");
 });
 
-// 重置好好学习pro脚本设置
+// 重置学习助手脚本设置
 ui.ttxs_pro_reset.click(function () {
     TTXS_PRO_CONFIG.put("watchdog", "1800");
     ui.ttxs_pro_watchdog.setText(TTXS_PRO_CONFIG.get("watchdog"));
@@ -659,7 +659,7 @@ ui.ttxs_pro_reset.click(function () {
     TTXS_PRO_CONFIG.put("zhanghao", "");
     ui.ttxs_pro_zhanghao.setText(TTXS_PRO_CONFIG.get("zhanghao"));
 
-    toastLog("好好学习pro配置恢复默认！");
+    toastLog("学习助手配置恢复默认！");
 });
 
 // 保存study脚本设置
