@@ -257,9 +257,9 @@ ui.layout(
                                 <View bg="#00BFFF" h="*" w="10"  ></View>
                                 <vertical padding="10 8" h="auto" w="0" layout_weight="1">
                                     <text w="auto" textColor="#222222" textSize="15sp" text="账号(限 1 个)" />
-                                    <text w="auto" textColor="#999999" textSize="12sp" text="使用前确保所有账号都已完成短信验证" />
+                                    <text w="auto" textColor="#999999" textSize="12sp" text="使用前确保账号都已完成短信验证" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="账号:密码:token" />
-                                    <text w="auto" textColor="#999999" textSize="12sp" text="结束后会自动登回账号" />
+                                    <text w="auto" textColor="#999999" textSize="12sp" text="结束后会自动退出账号" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="新增账号分数微信推送，按格式配置即可" />
                                     <text w="auto" textColor="#999999" textSize="12sp" text="没有则根据上面配置的pushplus_token为主" />
                                     <input id="ttxs_pro_zhanghao" text="" textSize="13sp" />
@@ -635,7 +635,7 @@ ui.ttxs_pro_reset.click(function () {
     ui.ttxs_pro_fast_mode.setChecked(TTXS_PRO_CONFIG.get("fast_mode"));
     TTXS_PRO_CONFIG.put("ddtong", false);
     ui.ttxs_pro_ddtong.setChecked(TTXS_PRO_CONFIG.get("ddtong"));
-    TTXS_PRO_CONFIG.put("is_exit", true);
+    TTXS_PRO_CONFIG.put("is_exit", false);
     ui.ttxs_pro_is_exit.setChecked(TTXS_PRO_CONFIG.get("is_exit"));
     TTXS_PRO_CONFIG.put("pinglun", true);
     ui.ttxs_pro_pinglun.setChecked(TTXS_PRO_CONFIG.get("pinglun"));
@@ -645,9 +645,9 @@ ui.ttxs_pro_reset.click(function () {
     ui.ttxs_pro_wenzhang.setChecked(TTXS_PRO_CONFIG.get("wenzhang"));
     TTXS_PRO_CONFIG.put("meiri", true);
     ui.ttxs_pro_meiri.setChecked(TTXS_PRO_CONFIG.get("meiri"));
-    TTXS_PRO_CONFIG.put("meizhou", 0);
+    TTXS_PRO_CONFIG.put("meizhou", 1);
     ui.ttxs_pro_meizhou.setSelection(TTXS_PRO_CONFIG.get("meizhou"));
-    TTXS_PRO_CONFIG.put("zhuanxiang", 0);
+    TTXS_PRO_CONFIG.put("zhuanxiang", 1);
     ui.ttxs_pro_zhuanxiang.setSelection(TTXS_PRO_CONFIG.get("zhuanxiang"));
     TTXS_PRO_CONFIG.put("tiaozhan", true);
     ui.ttxs_pro_tiaozhan.setChecked(TTXS_PRO_CONFIG.get("tiaozhan"));
@@ -659,17 +659,17 @@ ui.ttxs_pro_reset.click(function () {
     ui.ttxs_pro_duizhan_mode.setSelection(TTXS_PRO_CONFIG.get("duizhan_mode"));
     TTXS_PRO_CONFIG.put("jisu", "0");
     ui.ttxs_pro_jisu.setText(TTXS_PRO_CONFIG.get("jisu"));
-    TTXS_PRO_CONFIG.put("guaji", true);
+    TTXS_PRO_CONFIG.put("guaji", false);
     ui.ttxs_pro_guaji.setChecked(TTXS_PRO_CONFIG.get("guaji"));
     TTXS_PRO_CONFIG.put("siren", true);
     ui.ttxs_pro_siren.setChecked(TTXS_PRO_CONFIG.get("siren"));
-    TTXS_PRO_CONFIG.put("dacuo_num", "2");
+    TTXS_PRO_CONFIG.put("dacuo_num", "0");
     ui.ttxs_pro_dacuo_num.setText(TTXS_PRO_CONFIG.get("dacuo_num"));
     TTXS_PRO_CONFIG.put("shuangren", true);
     ui.ttxs_pro_shuangren.setChecked(TTXS_PRO_CONFIG.get("shuangren"));
     TTXS_PRO_CONFIG.put("bendi", true);
     ui.ttxs_pro_bendi.setChecked(TTXS_PRO_CONFIG.get("bendi"));
-    TTXS_PRO_CONFIG.put("dingyue", 0);
+    TTXS_PRO_CONFIG.put("dingyue", 1);
     ui.ttxs_pro_dingyue.setSelection(TTXS_PRO_CONFIG.get("dingyue"));
     TTXS_PRO_CONFIG.put("pushplus", "");
     ui.ttxs_pro_pushplus.setText(TTXS_PRO_CONFIG.get("pushplus"));
@@ -786,27 +786,27 @@ function Initialize() {
     ui.ttxs_pro_slide_verify.setText(TTXS_PRO_CONFIG.get("slide_verify", "300"));
     ui.ttxs_pro_fast_mode.setChecked(TTXS_PRO_CONFIG.get("fast_mode", false));
     ui.ttxs_pro_ddtong.setChecked(TTXS_PRO_CONFIG.get("ddtong", false));
-    ui.ttxs_pro_is_exit.setChecked(TTXS_PRO_CONFIG.get("is_exit", true));
+    ui.ttxs_pro_is_exit.setChecked(TTXS_PRO_CONFIG.get("is_exit", false));
     ui.ttxs_pro_pinglun.setChecked(TTXS_PRO_CONFIG.get("pinglun", true));
     ui.ttxs_pro_shipin.setChecked(TTXS_PRO_CONFIG.get("shipin", true));
     ui.ttxs_pro_wenzhang.setChecked(TTXS_PRO_CONFIG.get("wenzhang", true));
     ui.ttxs_pro_meiri.setChecked(TTXS_PRO_CONFIG.get("meiri", true));
-    ui.ttxs_pro_meizhou.setSelection(TTXS_PRO_CONFIG.get("meizhou", 0));
-    ui.ttxs_pro_zhuanxiang.setSelection(TTXS_PRO_CONFIG.get("zhuanxiang", 0));
+    ui.ttxs_pro_meizhou.setSelection(TTXS_PRO_CONFIG.get("meizhou", 1));
+    ui.ttxs_pro_zhuanxiang.setSelection(TTXS_PRO_CONFIG.get("zhuanxiang", 1));
     ui.ttxs_pro_tiaozhan.setChecked(TTXS_PRO_CONFIG.get("tiaozhan", true));
     ui.ttxs_pro_ocr_choice.setSelection(TTXS_PRO_CONFIG.get("ocr_choice", 0));
     ui.ttxs_pro_ocr_maxtime.setText(TTXS_PRO_CONFIG.get("ocr_maxtime", "5000"));
     ui.ttxs_pro_duizhan_mode.setSelection(TTXS_PRO_CONFIG.get("duizhan_mode", 0));
     ui.ttxs_pro_jisu.setText(TTXS_PRO_CONFIG.get("jisu", "0"));
-    ui.ttxs_pro_guaji.setChecked(TTXS_PRO_CONFIG.get("guaji", true));
+    ui.ttxs_pro_guaji.setChecked(TTXS_PRO_CONFIG.get("guaji", false));
     ui.ttxs_pro_siren.setChecked(TTXS_PRO_CONFIG.get("siren", true));
-    ui.ttxs_pro_dacuo_num.setText(TTXS_PRO_CONFIG.get("dacuo_num", "2"));
+    ui.ttxs_pro_dacuo_num.setText(TTXS_PRO_CONFIG.get("dacuo_num", "0"));
     ui.ttxs_pro_shuangren.setChecked(TTXS_PRO_CONFIG.get("shuangren", true));
     ui.ttxs_pro_bendi.setChecked(TTXS_PRO_CONFIG.get("bendi", true));
     ui.ttxs_pro_dingyue.setSelection(TTXS_PRO_CONFIG.get("dingyue", 0));
     ui.ttxs_pro_pushplus.setText(TTXS_PRO_CONFIG.get("pushplus", ""));
     ui.ttxs_pro_yl_on.setChecked(TTXS_PRO_CONFIG.get("yl_on", true));
-    ui.ttxs_pro_yinliang.setText(TTXS_PRO_CONFIG.get("yinliang", "0"));
+    ui.ttxs_pro_yinliang.setText(TTXS_PRO_CONFIG.get("yinliang", "1"));
     ui.ttxs_pro_zhanghao.setText(TTXS_PRO_CONFIG.get("zhanghao", ""));
 
     ui.study_article.setChecked(STUDY_CONFIG.get("article", true));
