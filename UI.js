@@ -256,12 +256,6 @@ ui.layout(
                             <horizontal  gravity="center_vertical" padding="5 5" >
                                 <View bg="#00BFFF" h="*" w="10"  ></View>
                                 <vertical padding="10 8" h="auto" w="0" layout_weight="1">
-                                    <text w="auto" textColor="#222222" textSize="15sp" text="账号(限 1 个)" />
-                                    <text w="auto" textColor="#999999" textSize="12sp" text="使用前确保账号都已完成短信验证" />
-                                    <text w="auto" textColor="#999999" textSize="12sp" text="账号:密码:token" />
-                                    <text w="auto" textColor="#999999" textSize="12sp" text="结束后会自动退出账号" />
-                                    <text w="auto" textColor="#999999" textSize="12sp" text="新增账号分数微信推送，按格式配置即可" />
-                                    <text w="auto" textColor="#999999" textSize="12sp" text="没有则根据上面配置的pushplus_token为主" />
                                     <input id="ttxs_pro_zhanghao" text="" textSize="13sp" />
                                 </vertical> 
                             </horizontal>
@@ -803,10 +797,10 @@ function Initialize() {
     ui.ttxs_pro_dacuo_num.setText(TTXS_PRO_CONFIG.get("dacuo_num", "0"));
     ui.ttxs_pro_shuangren.setChecked(TTXS_PRO_CONFIG.get("shuangren", true));
     ui.ttxs_pro_bendi.setChecked(TTXS_PRO_CONFIG.get("bendi", true));
-    ui.ttxs_pro_dingyue.setSelection(TTXS_PRO_CONFIG.get("dingyue", 0));
+    ui.ttxs_pro_dingyue.setSelection(TTXS_PRO_CONFIG.get("dingyue", 1));
     ui.ttxs_pro_pushplus.setText(TTXS_PRO_CONFIG.get("pushplus", ""));
     ui.ttxs_pro_yl_on.setChecked(TTXS_PRO_CONFIG.get("yl_on", true));
-    ui.ttxs_pro_yinliang.setText(TTXS_PRO_CONFIG.get("yinliang", "1"));
+    ui.ttxs_pro_yinliang.setText(TTXS_PRO_CONFIG.get("yinliang", "0"));
     ui.ttxs_pro_zhanghao.setText(TTXS_PRO_CONFIG.get("zhanghao", ""));
 
     ui.study_article.setChecked(STUDY_CONFIG.get("article", true));
@@ -864,10 +858,10 @@ function check_baidu_api() {
 
 function getScript(choice) {
     let url_prefix = [
-        'https://gh-proxy.com/https://raw.githubusercontent.com/zlj520/X/main/',
-        "https://ghproxy.com/https://raw.githubusercontent.com/zlj520/X/main/",
-        'https://cdn.jsdelivr.net/gh/zlj520/X@main/',
-        'https://raw.githubusercontent.com/zlj520/X/main/',
+        'https://gh-proxy.com/https://raw.githubusercontent.com/zlj520/HHXX/main/',
+        "https://ghproxy.com/https://raw.githubusercontent.com/zlj520/HHXX/main/",
+        'https://cdn.jsdelivr.net/gh/zlj520/HHXX@main/',
+        'https://raw.githubusercontent.com/zlj520/HHXX/main/',
     ];
     for (var i = 0; i < url_prefix.length; i++) {
         try {
